@@ -487,6 +487,15 @@ span.new5 {
 
 /* popular.inc.php */
 span.counter { font-size:70%; }
+
+ol,ul {
+  margin: 0px 0px 0px 2em
+}
+
+ol ol { list-style: lower-roman }
+ol ol ol { list-style: lower-alpha }
+
+
 ul.popular_list {
 <?php
 /*
