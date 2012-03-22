@@ -554,10 +554,11 @@ div.contents {
   background-color: #f8f8f8;
   font-size: 90%;
   text-align: left;
-  margin: 0px;
+  margin: 1em 0px 1em 0px;
   padding: 2em 4em 2em 2em;
   display: inline-table;
   max-width: 65%;
+  box-shadow: 2px 2px 4px #ccc;
 }
 
 div.contents ul li { list-style-type: none }
