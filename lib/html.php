@@ -209,7 +209,10 @@ function edit_form($page, $postdata, $digest = FALSE, $b_template = TRUE)
    <option value="">-- $_btn_template --</option>
 $s_pages
   </select>
-  <input type="submit" name="template" value="$_btn_load" accesskey="r" />
+  <input type="submit" class="small" name="template" value="$_btn_load" accesskey="r" />
+  &nbsp;
+  <button id="auto-idx" class="small">AutoIdx</button>
+  <button id="rem-idx" class="small">RemoveIdx</button>
   <br />
 EOD;
 
@@ -255,7 +258,7 @@ $template
   <input type="hidden" name="page"   value="$s_page" />
   <input type="hidden" name="digest" value="$s_digest" />
   <input type="hidden" name="id"     value="$s_id" />
-  <textarea name="msg" rows="$rows" cols="$cols">$s_postdata</textarea>
+  <textarea id="msg" name="msg" rows="$rows" cols="$cols">$s_postdata</textarea>
   <br />
   <div>
    <input type="submit" name="preview" value="$btn_preview" accesskey="p" />

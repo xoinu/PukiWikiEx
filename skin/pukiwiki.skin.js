@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
     }
     else {
       $('#menubar').css('display', 'none');
-      $('#contents').removeClass('col_8').addClass('col_12');
+            $('#contents').removeClass('col_8').addClass('col_12');
     }
   });
 
@@ -44,4 +44,74 @@ jQuery(document).ready(function($){
     }
   });
   */
+
+  function pkwk_removeIndex(text)
+  {
+    var content = new Array;
+    var lines = text.split("\n");
+
+    for (var i in lines) {
+      var line = lines[i];
+
+      if (line.match(/^\*\*\*/)) {
+        line = line.replace(/^\*\*\*\s*\d+[\.\d]*\s+/, "*** ");
+      }
+      else if (line.match(/^\*\*/)) {
+        line = line.replace(/^\*\*\s*\d+[\.\d]*\s+/, "** ");
+      }
+      else if (line.match(/^\*/)) {
+        line = line.replace(/^\*\s*\d+[\.\d]*\s+/, "* ");
+      }
+      content.push(line);
+    }
+    return content.join("\n");
+  }
+
+  function pkwk_removeIndexTextArea(elem)
+  {
+    elem.value = pkwk_removeIndex(elem.value);
+  }
+
+  function pkwk_autoIndexTextArea(elem)
+  {
+    var content = new Array;
+    var lines = pkwk_removeIndex(elem.value).split("\n");
+    var curr_sec = 0;
+    var curr_sub_sec = 0;
+    var curr_sub_sub_sec = 0;
+    for (var i in lines) {
+      var line = lines[i];
+      if (line.match(/^\*\*\*/)) {
+        ++curr_sub_sub_sec;
+        line = line.replace(/^\*+\s*/, "");
+        line = "*** " + curr_sec + "." + curr_sub_sec + "." + curr_sub_sub_sec + ". " + line;
+      }
+      else if (line.match(/^\*\*/)) {
+        ++curr_sub_sec;
+        line = line.replace(/^\*+\s*/, "");
+        line = "** " + curr_sec + "." + curr_sub_sec + ". " + line;
+        curr_sub_sub_sec = 0;
+      }
+      else if (line.match(/^\*/)) {
+        ++curr_sec;
+        line = line.replace(/^\*+\s*/, "");
+        line = "* " + curr_sec + ". " + line;
+        curr_sub_sec = 0;
+        curr_sub_sub_sec = 0;
+      }
+      content.push(line);
+    }
+    elem.value = content.join("\n");
+  }
+
+  $('#auto-idx').on('click', function(e){
+    e.preventDefault();
+    pkwk_autoIndexTextArea($('#msg').get(0));
+  });
+
+  $('#rem-idx').on('click', function(e){
+    e.preventDefault();
+    pkwk_removeIndexTextArea($('#msg').get(0));
+  });
+
 });
