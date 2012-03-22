@@ -12,7 +12,8 @@
 
 define('S_VERSION', '1.4.7');
 define('S_COPYRIGHT',
-	'<strong>PukiWiki ' . S_VERSION . '</strong>' .
+	'<strong>PukiWikiEx 0.1</strong> Copyright &copy; 2012 Junnosuke Yamazaki<br/>Based on ' .
+	'"PukiWiki ' . S_VERSION . '"' .
 	' Copyright &copy; 2001-2006' .
 	' <a href="http://pukiwiki.sourceforge.jp/">PukiWiki Developers Team</a>.' .
 	' License is <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>.<br />' .

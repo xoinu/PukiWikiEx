@@ -216,8 +216,8 @@ $s_pages
   <br />
 EOD;
 
-		if (isset($vars['refer']) && $vars['refer'] != '')
-			$refer = '[[' . strip_bracket($vars['refer']) . ']]' . "\n\n";
+		//if (isset($vars['refer']) && $vars['refer'] != '')
+		//	$refer = '[[' . strip_bracket($vars['refer']) . ']]' . "\n\n";
 	}
 
 	$r_page      = rawurlencode($page);

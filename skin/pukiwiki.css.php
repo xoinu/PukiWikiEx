@@ -567,9 +567,7 @@ ul.list2, ul.list3, ul.list4, ul.list5 { margin: 0px 0px 0px 2em }
 <?php if ($media == 'print') { ?>
     ul.breadcrumbs, ul.menu, div#menubar, div#footer, div#lastmodified, div#attach, a.anchor_super, div.jumpmenu { display : none }
     div#wrap { border-width:0px }
-<?php }  ?>
-
-
+<?php } else { ?>
 /* Toggle Tree */
 ul.toggle-tree { margin: 0px 0px 0px .5em }
 ul.toggle-tree li           { list-style: none }
@@ -579,3 +577,4 @@ ul.toggle-tree li.closed    { cursor: pointer; background: url(../image/plus.gif
 ul.toggle-tree li.bullet    { cursor: default; background: url(../image/bullet.gif) top left no-repeat }
 ul.toggle-tree li.open   ul { display: block }
 ul.toggle-tree li.closed ul { display: none }
+<?php } ?>

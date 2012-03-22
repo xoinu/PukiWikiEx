@@ -17,7 +17,6 @@ jQuery(document).ready(function($){
   //
   // Toggle Tree
   //
-  /*
   function imbueToggleTree() {
     return function (elem, is_open) {
       elem.removeClass('toggle-tree-closed').addClass('toggle-tree');
@@ -43,10 +42,14 @@ jQuery(document).ready(function($){
       return false;
     }
   });
-  */
 
-  function pkwk_removeIndex(text)
-  {
+  $('li.open a,li.closed a').bind('click', function(e) {
+    e.preventDefault();
+    location.href = $(this).attr('href');
+    return false;
+  });
+
+  function pkwk_removeIndex(text) {
     var content = new Array;
     var lines = text.split("\n");
 
@@ -67,13 +70,11 @@ jQuery(document).ready(function($){
     return content.join("\n");
   }
 
-  function pkwk_removeIndexTextArea(elem)
-  {
+  function pkwk_removeIndexTextArea(elem) {
     elem.value = pkwk_removeIndex(elem.value);
   }
 
-  function pkwk_autoIndexTextArea(elem)
-  {
+  function pkwk_autoIndexTextArea(elem) {
     var content = new Array;
     var lines = pkwk_removeIndex(elem.value).split("\n");
     var curr_sec = 0;
@@ -104,12 +105,12 @@ jQuery(document).ready(function($){
     elem.value = content.join("\n");
   }
 
-  $('#auto-idx').on('click', function(e){
+  $('#auto-idx').on('click', function(e) {
     e.preventDefault();
     pkwk_autoIndexTextArea($('#msg').get(0));
   });
 
-  $('#rem-idx').on('click', function(e){
+  $('#rem-idx').on('click', function(e) {
     e.preventDefault();
     pkwk_removeIndexTextArea($('#msg').get(0));
   });
