@@ -494,7 +494,7 @@ ol,ul {
 
 ol ol { list-style: lower-roman }
 ol ol ol { list-style: lower-alpha }
-
+thead td { font-weight: bold; background-color: #f0f0f0; text-align:center }
 
 ul.popular_list {
 <?php
