@@ -215,6 +215,17 @@ strong.word9 {
 /* html.php/edit_form() */
 .edit_form { clear:both; }
 
+textarea {
+    margin: 5px 0px 5px 0px;
+    height:400px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    width:100%;
+    resize: vertical;
+}
+
 /* pukiwiki.skin.php */
 div#header {
 	padding:0px;

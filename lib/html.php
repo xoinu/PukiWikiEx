@@ -257,7 +257,7 @@ $template
   <input type="hidden" name="id"     value="$s_id" />
   <textarea name="msg" rows="$rows" cols="$cols">$s_postdata</textarea>
   <br />
-  <div style="float:left;">
+  <div>
    <input type="submit" name="preview" value="$btn_preview" accesskey="p" />
    <input type="submit" name="write"   value="$_btn_update" accesskey="s" />
    $add_top
@@ -276,9 +276,9 @@ EOD;
 	if (isset($vars['help'])) {
 		$body .= $hr . catrule();
 	} else {
-		$body .= '<ul><li><a href="' .
+		$body .= '<p><a href="' .
 			$script . '?cmd=edit&amp;help=true&amp;page=' . $r_page .
-			'">' . $_msg_help . '</a></li></ul>';
+			'">' . $_msg_help . '</a></p>';
 	}
 
 	return $body;
