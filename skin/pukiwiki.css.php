@@ -329,10 +329,11 @@ br.spacer {}
 .style_calendar {
 	padding:0px;
 	border:0px;
-	margin:3px;
+    margin: 3px;
 	color:inherit;
 	background-color:#ddd;
 	text-align:center;
+    box-shadow: 2px 2px 4px #ccc;
 }
 .style_td_caltop {
 	padding:5px;
