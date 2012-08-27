@@ -57,7 +57,7 @@ word-wrap : break-word;
 }
 
 #wrap{
-width:960px;/*960*/
+/*width:960px;*/
 background:#fff;
 margin:30px auto 30px auto;
 padding:0;

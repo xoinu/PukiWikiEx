@@ -314,12 +314,12 @@ Powered by PHP <?php echo PHP_VERSION ?>. HTML convert time: <?php echo $taketim
 <?php if (PKWK_ALLOW_JAVASCRIPT) { // Load JavaScript in the end so that pages can be loaded faster.
 ?>
     <script type="text/javascript" src="skin/jquery-1.7.1.min.js"></script>
-     <script type="text/javascript" src="skin/kickstart/js/prettify.js"></script>  <!-- PRETTIFY -->
-     <script type="text/javascript" src="skin/kickstart/js/kickstart.js"></script> <!-- KICKSTART -->
-     <script type="text/javascript" src="skin/pukiwiki.skin.js"></script>
+    <script type="text/javascript" src="skin/kickstart/js/prettify.js"></script>  <!-- PRETTIFY -->
+    <script type="text/javascript" src="skin/kickstart/js/kickstart.js"></script> <!-- KICKSTART -->
+    <script type="text/javascript" src="skin/pukiwiki.skin.js"></script>
 <?php   if ($trackback_javascript) { ?>
     <script type="text/javascript" src="skin/trackback.js"></script>
 <?php       } ?>
 <?php   } ?>
-     </body>
+    </body>
 </html>
